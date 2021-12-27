@@ -1,13 +1,118 @@
-body {
+/* CSS RESET */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figure,
+pre,
+dl,
+dd,
+blockquote,
+input[type="radio"],
+input[type="checkbox"] {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+}
+legend {
+  padding: 0;
+}
+fieldset,
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}
+ul,
+ol {
+  list-style: none;
+}
+body {
+  line-height: 1;
+}
+main,
+figure,
+figcaption,
+img {
+  display: block;
+} /* IE 11 */
+img {
+  max-width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+}
+fieldset {
+  border: 0;
+}
+input,
+textarea,
+select,
+button {
+  display: block;
+  max-width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+label {
+  display: table;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"] {
+  -webkit-appearance: none;
+} /* Safari */
+button {
+  line-height: inherit;
+}
+button::-moz-focus-inner {
+  border: 0;
+} /* Firefox */
+
+html {
+  font-size: 16px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: "Amatic SC";
+  src: url("./fonts/AmaticSC-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto Light";
+  src: url("./fonts/Roboto-Light.ttf") format("truetype");
+}
+
+.font-amatic {
+  font-family: Amatic SC;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0em;
+}
+
+.font-roboto {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: 0em;
+}
+
+.font-roboto-light {
+  font-family: Roboto Light;
+  font-style: normal;
+  font-weight: 200;
+  letter-spacing: 0em;
+}
+
+[data-target] {
+  cursor: pointer;
 }
