@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, createRef } from 'react';
 import './Header.css'
 import LogoImage from '../images/logo.png'
 import MenuButtonImage from '../images/hamburger.svg'
@@ -13,9 +13,9 @@ export default class Header extends Component {
     constructor(props) {
         super(props);
         this.handleNavigation = props.navigationHandler.bind(this);
-        this.headerRef = React.createRef();
-        this.overlayMenuRef = React.createRef();
-        this.overlayCloseButtonRef = React.createRef();
+        this.headerRef = createRef();
+        this.overlayMenuRef = createRef();
+        this.overlayCloseButtonRef = createRef();
     }
 
     componentDidMount() {

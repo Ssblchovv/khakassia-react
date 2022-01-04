@@ -1,8 +1,15 @@
-import React, { Component } from 'react';
+import React, { Component, createRef } from 'react';
 import './App.css';
 import Header from './components/Header'
+import HeroSection from './components/HeroSection'
 
 export default class App extends Component {
+    constructor(props) {
+        super(props);
+
+        this.sectionRef = createRef();
+    }
+
     goToSection = (ctx) => {
         let targetSection;
 
@@ -17,6 +24,7 @@ export default class App extends Component {
         return (
             <div>
                 <Header navigationHandler={this.goToSection} />
+                <HeroSection sectionRef={this.heroSectionRef} />
             </div>
         );
     }

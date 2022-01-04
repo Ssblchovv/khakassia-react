@@ -75,6 +75,7 @@ button::-moz-focus-inner {
 
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 @font-face {
@@ -115,4 +116,8 @@ html {
 
 [data-target] {
   cursor: pointer;
+}
+
+section[data-secname] {
+  padding: 7.25rem 8.125rem 7.25rem 8.125rem;
 }
