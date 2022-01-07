@@ -44,6 +44,16 @@ export default class App extends Component {
         this.contactsRef = createRef();
     }
 
+    
+    scrollWithOffset = (target) => {
+        if (target != null) {
+            const yOffset = -32; 
+            const y = target.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        
+            window.scrollTo({top: y, behavior: 'smooth'});
+        }
+    }
+
     goToSection = (ctx) => {
         let targetSection;
 
@@ -51,7 +61,23 @@ export default class App extends Component {
             targetSection = ctx.target.dataset.target;
         } catch { return; }
 
-        console.log(targetSection);
+        switch (targetSection) {
+            case "main":
+                this.heroSectionRef.current.scrollIntoView();
+                break;
+            case "sightseens":
+                this.scrollWithOffset(this.sightseensSectionRef.current);
+                break;
+            case "tours":
+                this.scrollWithOffset(this.toursSectionRef.current);
+                break;
+            case "contacts":
+                this.scrollWithOffset(this.contactsRef.current);
+                break;
+            default:
+                console.log(targetSection);
+                break;
+        }
     }
 
     render() {

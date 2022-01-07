@@ -12,7 +12,7 @@ export default class Header extends Component {
 
     constructor(props) {
         super(props);
-        this.handleNavigation = props.navigationHandler.bind(this);
+        this._handleNavigation = props.navigationHandler.bind(this);
         this.headerRef = createRef();
         this.overlayMenuRef = createRef();
         this.overlayCloseButtonRef = createRef();
@@ -21,6 +21,11 @@ export default class Header extends Component {
     componentDidMount() {
         window.addEventListener("scroll", this.handleScroll);
         this.overlayMenuRef.current.style.display = "none";
+    }
+
+    handleNavigation = (target) => {
+        this._handleNavigation(target);
+        this.switchNavigation(true);
     }
 
     handleScroll = () => {
