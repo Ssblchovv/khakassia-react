@@ -19,7 +19,7 @@ export default class Contacts extends Component {
 
                 <div className="Contacts__Content">
                     <div className="Contacts-List font-roboto">
-                        <div className="Contacts-List-Item" style={{"align-items": "center"}}>
+                        <div className="Contacts-List-Item" style={{alignItems: "center"}}>
                             <img className="Contacts-List-Item__Icon" src={PlaceImage} alt="Пиктограмма местоположения" />
                             <span className="Contacts-List-Item__Text">655019, Республика Хакасия, г. Абакан, пр. Ленина, д. 67</span>
                         </div>
@@ -32,7 +32,7 @@ export default class Contacts extends Component {
                             </span>
                         </div>
                         
-                        <div className="Contacts-List-Item" style={{"align-items": "center"}}>
+                        <div className="Contacts-List-Item" style={{alignItems: "center"}}>
                             <img className="Contacts-List-Item__Icon" src={EmailImage} alt="Пиктограмма эл. почты" />
                             <span className="Contacts-List-Item__Text">kancler@vskhakasia.ru</span>
                         </div>
