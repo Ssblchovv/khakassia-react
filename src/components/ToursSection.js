@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './ToursSection.css'
 import TourImage from '../images/DJI_0210.png'
 
-export default class SightseensSection extends Component {
+export default class ToursSection extends Component {
     state = {
         toursHidden: true
     }
