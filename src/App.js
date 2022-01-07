@@ -5,6 +5,7 @@ import HeroSection from './components/HeroSection'
 import SightseensSection from './components/SightseensSection'
 import ToursSection from './components/ToursSection'
 import Contacts from './components/Contacts'
+import Footer from './components/Footer'
 
 export default class App extends Component {
     sightseensData = [
@@ -61,6 +62,7 @@ export default class App extends Component {
                 <SightseensSection sectionRef={this.sightseensSectionRef} sightseens={this.sightseensData} />
                 <ToursSection sectionRef={this.toursSectionRef} tours={this.toursData} />
                 <Contacts sectionRef={this.contactsRef} />
+                <Footer navigationHandler={this.goToSection} />
             </div>
         );
     }
