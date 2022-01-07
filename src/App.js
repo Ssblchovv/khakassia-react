@@ -4,6 +4,7 @@ import Header from './components/Header'
 import HeroSection from './components/HeroSection'
 import SightseensSection from './components/SightseensSection'
 import ToursSection from './components/ToursSection'
+import Contacts from './components/Contacts'
 
 export default class App extends Component {
     sightseensData = [
@@ -39,6 +40,7 @@ export default class App extends Component {
         this.heroSectionRef = createRef();
         this.sightseensSectionRef = createRef();
         this.toursSectionRef = createRef();
+        this.contactsRef = createRef();
     }
 
     goToSection = (ctx) => {
@@ -58,6 +60,7 @@ export default class App extends Component {
                 <HeroSection sectionRef={this.heroSectionRef} />
                 <SightseensSection sectionRef={this.sightseensSectionRef} sightseens={this.sightseensData} />
                 <ToursSection sectionRef={this.toursSectionRef} tours={this.toursData} />
+                <Contacts sectionRef={this.contactsRef} />
             </div>
         );
     }
