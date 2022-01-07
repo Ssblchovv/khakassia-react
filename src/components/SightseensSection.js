@@ -16,8 +16,8 @@ export default class SightseensSection extends Component {
                 <h2 className="text-section-title font-amatic">Достопримечательности</h2>
 
                 <div className="Sightseens__Content">
-                    {this.sightseens.map(ss => 
-                        (<div className="Sightseens-List-Element">
+                    {this.sightseens.map((ss, index) => 
+                        (<div key={index} className="Sightseens-List-Element">
                             <img className="Sightseens-List-Element__Image" src={SightSeenImage} alt={ss.image_alt} />
                             <article className="Sightseens-List-Element-Content font-roboto">
                                 <h6 className="Sightseens-List-Element-Content__Title">{ss.title}</h6>

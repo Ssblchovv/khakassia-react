@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header'
 import HeroSection from './components/HeroSection'
 import SightseensSection from './components/SightseensSection'
+import ToursSection from './components/ToursSection'
 
 export default class App extends Component {
     sightseensData = [
@@ -23,11 +24,21 @@ export default class App extends Component {
         },
     ]
 
+    toursData = [0,1,2,3,4,5].map(_ => {
+        return {
+            image_alt: "Изображение тура",
+            title: "Название",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium orci at rutrum pellentesque.",
+            price: 10000
+        };
+    })
+
     constructor(props) {
         super(props);
 
         this.heroSectionRef = createRef();
         this.sightseensSectionRef = createRef();
+        this.toursSectionRef = createRef();
     }
 
     goToSection = (ctx) => {
@@ -46,6 +57,7 @@ export default class App extends Component {
                 <Header navigationHandler={this.goToSection} />
                 <HeroSection sectionRef={this.heroSectionRef} />
                 <SightseensSection sectionRef={this.sightseensSectionRef} sightseens={this.sightseensData} />
+                <ToursSection sectionRef={this.toursSectionRef} tours={this.toursData} />
             </div>
         );
     }
