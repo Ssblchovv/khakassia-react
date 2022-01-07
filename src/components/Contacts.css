@@ -36,6 +36,11 @@
   text-align: left;
 }
 
+.Contacts__Map {
+  height: 25rem;
+  object-fit: cover;
+}
+
 @media (min-width:1025px) { 
   .Contacts {
     padding: 7.25rem 8.125rem 7.25rem 8.125rem;

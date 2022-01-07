@@ -38,7 +38,7 @@ export default class Contacts extends Component {
                         </div>
                     </div>
 
-                    <img className="contacts__map" src={MapImage} alt="Карта" />
+                    <img className="Contacts__Map" src={MapImage} alt="Карта" />
                 </div>
             </section>
         );
