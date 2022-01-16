@@ -1,0 +1,56 @@
+.Hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Hero_Theme_Main {
+  background-image: url("../images/DSC00015.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* .Hero__Content { } */
+
+.Hero__Title {
+  font-size: 6rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+.Hero__Subtitle {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0;
+}
+
+.Hero__Arrow {
+  padding: 1rem;
+  animation-duration: 3s;
+  animation-name: mowing_arrow;
+  animation-iteration-count: infinite;
+}
+
+@keyframes mowing_arrow {
+  0% {
+    transform: translate(0);
+  }
+
+  25% {
+    transform: translate(0, -45%);
+  }
+  
+  100% {
+    transform: translate(0);
+  }
+}
+
+@media (min-width:1025px) { 
+  section.hero {
+    padding: unset;
+  }
+}

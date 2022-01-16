@@ -1,0 +1,186 @@
+.OverlayMenu {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background: rgba(17, 17, 17, 0.8);
+    overflow-x: hidden;
+}
+
+.OverlayMenu-Opened {
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: .5s;
+}
+
+.OverlayMenu-Closed {
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: .5s;
+}
+
+.OverlayMenu__Logo {
+    width: 2.5rem;
+    position: absolute;
+    top: 1.25rem;
+    left: 1.25rem;
+}
+
+.OverlayMenu__CloseButton {
+    position: absolute;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    font-size: 60px;
+    
+    transition: all .5s ease-out;
+  
+    animation-duration: 1s;
+    animation-name: moving_close_btn;
+}
+
+@keyframes moving_close_btn {
+  from {
+    bottom: 92%;
+  }
+  
+  to {
+    bottom: 1.25rem;
+  }
+}
+
+.OverlayMenu__CloseButton .ButtonLine {
+  width: 28px;
+  height: 3px;
+  margin: 0 0 5px 0;
+  background: white;
+  transition: all .5s ease-out;
+}
+
+.OverlayMenu__CloseButton_Closer {
+  transform: rotate(180deg);
+}
+
+.OverlayMenu__CloseButton_Closer .ButtonLine:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.OverlayMenu__CloseButton_Closer .ButtonLine:nth-child(2) {
+  opacity: 0;
+}
+
+.OverlayMenu__CloseButton_Closer .ButtonLine:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+.OverlayMenuContent {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+}
+
+.OverlayMenuContent > span:first-child,
+.DesktopNavigation > span:first-child {
+    text-decoration: underline !important;
+}
+
+.OverlayMenuContent__Item {
+    padding: 8px;
+    text-decoration: none;
+    display: block;
+    color: rgb(255, 255, 255);
+    transition: color 0.3s;
+    
+    text-align: center;
+    font-size: 0.875rem;
+}
+
+.OverlayMenuContent__Item:hover,
+.OverlayMenuContent__Item:focus {
+  color: rgb(191, 191, 191);
+  transition: color 0.3s;
+}
+
+.Header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    z-index: 4;
+}
+
+.Header-Normal {
+    background-color: rgba(0, 0, 0, 0);
+  
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+}
+
+.Header-Scrolled {
+    background-color: rgb(0, 0, 0);
+
+    -webkit-transition: background-color 200ms linear;
+    -ms-transition: background-color 200ms linear;
+    transition: background-color 200ms linear;
+}
+
+.Logo {
+    padding: 1.25rem;
+}
+
+.Logo__Image {
+    width: 2.5rem;
+}
+
+.MenuButton {
+    width: 24px;
+    height: 1rem;
+
+    padding: 1.25rem;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/*.MenuButton__Image { }*/
+
+.DesktopNavigation {
+    display: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    gap: 1.25rem;
+    padding: 2rem 8.125rem 2rem 0;
+
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 0.875rem;
+}
+
+/*.DesktopNavigation__Item { }*/
+
+@media (min-width:1025px) { 
+    .Logo {
+      padding: 2rem 0 2rem 8.125rem;
+    }
+  
+    .Logo__Image {
+      width: 5rem;
+    }
+
+    .DesktopNavigation {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .MenuButton {
+      display: none;
+    }
+}

@@ -1,0 +1,57 @@
+.Contacts {
+  padding: 6rem 0 3rem 0;
+}
+
+.Contacts__Content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  margin: 0;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.Contacts-List {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+.Contacts-List-Item {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  font-size: 0.875rem;
+}
+
+.Contacts-List-Item__Icon {
+  padding-right: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.Contacts-List-Item__Text {
+  text-align: left;
+}
+
+.Contacts__Map {
+  height: 25rem;
+  object-fit: cover;
+}
+
+@media (min-width:1025px) { 
+  .Contacts {
+    padding: 7.25rem 8.125rem 7.25rem 8.125rem;
+    background-color: rgb(238, 238, 238);
+  }
+
+  .Contacts__Content {
+    flex-direction: row;
+  }
+
+  .Contacts-List {
+    align-self: flex-start;
+  }
+}

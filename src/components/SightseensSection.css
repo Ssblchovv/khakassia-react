@@ -1,0 +1,71 @@
+.Sightseens {
+  padding: 6rem 0 0 0;
+}
+
+.Sightseens__Content {
+  display: flex;
+  flex-direction: column;
+}
+
+.Sightseens-List-Element {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+}
+
+.Sightseens-List-Element__Image {
+  border-radius: 20px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.Sightseens-List-Element-Content {
+  padding-top: 1.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.Sightseens-List-Element-Content__Title {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: rgb(88, 88, 88);
+  padding-bottom: 1.625rem;
+  text-decoration: underline !important;
+}
+
+.Sightseens-List-Element-Content__Text {
+  font-size: 0.875rem;
+  line-height: 1rem;
+  margin: 0;
+}
+
+@media (min-width:1025px) { 
+  .Sightseens {
+    padding: 7.25rem 8.125rem 7.25rem 8.125rem;
+    background-color: rgb(238, 238, 238);
+  }
+
+  .Sightseens__Content {
+    gap: 1.75rem;
+  }
+
+  .Sightseens-List-Element {
+    display: flex;
+    padding: 0;
+    flex-direction: row;
+  }
+
+  .Sightseens-List-Element:nth-child(2n) {
+    flex-direction: row-reverse;
+  }
+
+  .Sightseens-List-Element:nth-child(2n) > article {
+    padding-left: 0;
+  }
+
+  .Sightseens-List-Element__Image {
+    max-height: 18.75rem;
+  }
+}
